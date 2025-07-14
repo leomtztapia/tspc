@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Secret Pizza Club - Landing Page
 
-## Getting Started
+Landing page minimalista para The Secret Pizza Club con diseño inspirado en Folklore.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- ✅ Slideshow automático con 20 fotos mezcladas
+- ✅ Logo oficial en navegación
+- ✅ Sección de menú con enlace a menubot
+- ✅ Horarios de servicio
+- ✅ Ubicación con mapa de Google
+- ✅ Historia del equipo
+- ✅ Feed de Instagram (API real)
+- ✅ Formulario de contacto con Formspree
+- ✅ Footer con imagen personalizada
+- ✅ Tipografía DM Sans
+- ✅ Paleta de colores personalizada
+- ✅ Diseño responsive
+
+## Configuración de Instagram API
+
+Para usar el feed real de Instagram, necesitas configurar las credenciales:
+
+### 1. Crear aplicación en Facebook Developers
+1. Ve a [Facebook Developers](https://developers.facebook.com/)
+2. Crea una nueva aplicación
+3. Agrega el producto "Instagram Basic Display"
+
+### 2. Obtener credenciales
+1. Ve a "Instagram Basic Display" > "Basic Display"
+2. Copia el "User Token" y "User ID"
+
+### 3. Configurar variables de entorno
+Crea un archivo `.env.local` en la raíz del proyecto:
+
+```env
+NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN=tu_token_aqui
+NEXT_PUBLIC_INSTAGRAM_USER_ID=tu_user_id_aqui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Alternativa sin API
+Si no configuras las credenciales, el componente mostrará posts de muestra usando las imágenes locales.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Instalación
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+## Tecnologías
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 15
+- TypeScript
+- CSS Modules
+- Instagram Basic Display API
+- Formspree
+- Google Fonts (DM Sans)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── components/          # Componentes React
+├── lib/               # Utilidades (Instagram API)
+├── app/               # Páginas y layout
+└── styles/            # Estilos globales
+```
 
-## Deploy on Vercel
+## Colores
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Rosa: `#E9B3D3`
+- Verde: `#00AE8D`
+- Negro: `#101820`
+- Blanco: `#FFFFFF`

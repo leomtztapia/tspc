@@ -1,0 +1,189 @@
+.locationSection {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--gray-dark);
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.mapContainer {
+  overflow: hidden;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: 0;
+  flex: 1;
+}
+
+.locationInfo {
+  padding: 40px;
+  background-color: var(--gray-light);
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.locationInfo h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.address {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--gray-dark);
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--white);
+  border-left: 4px solid var(--primary-green);
+}
+
+.details {
+  margin-bottom: 30px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: var(--white);
+  transition: transform 0.3s ease;
+}
+
+.detailItem:hover {
+  transform: translateX(5px);
+}
+
+.icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.detailItem h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--black);
+}
+
+.detailItem p {
+  color: var(--gray-dark);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.cta {
+  text-align: center;
+}
+
+.directionsButton {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .locationSection {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .locationGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mapContainer,
+  .locationInfo {
+    min-height: unset;
+    height: auto;
+    display: block;
+  }
+  .mapContainer iframe {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .locationInfo {
+    padding: 30px 20px;
+  }
+
+  .locationInfo h3 {
+    font-size: 1.5rem;
+  }
+
+  .address {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .locationInfo {
+    padding: 25px 15px;
+  }
+
+  .detailItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .detailItem:hover {
+    transform: translateY(-2px);
+  }
+} 

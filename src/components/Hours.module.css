@@ -1,0 +1,122 @@
+.hoursSection {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--gray-dark);
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hoursGrid {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  background-color: var(--gray-light);
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--gray-medium);
+  transition: background-color 0.3s ease;
+}
+
+.hourItem:last-child {
+  border-bottom: none;
+}
+
+.hourItem:hover {
+  background-color: var(--primary-pink);
+  color: var(--black);
+}
+
+.hourItem:hover .day,
+.hourItem:hover .time {
+  color: var(--black);
+}
+
+.day {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--black);
+  transition: color 0.3s ease;
+}
+
+.time {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+  transition: color 0.3s ease;
+}
+
+.note {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.note p {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hoursSection {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .hourItem {
+    padding: 15px 20px;
+  }
+
+  .day,
+  .time {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hourItem {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .day,
+  .time {
+    font-size: 0.9rem;
+  }
+} 

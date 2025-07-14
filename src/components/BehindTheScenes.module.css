@@ -1,0 +1,191 @@
+.section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #101820;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoCarousel {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.carouselContainer {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 1rem 0;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.videoItem {
+  flex: 0 0 256px; /* Reduced from 270px by 5% */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.videoItem:hover {
+  transform: translateY(-4px);
+}
+
+.video {
+  width: 100%;
+  height: 342px; /* Reduced from 360px by 5% */
+  object-fit: cover;
+  display: block;
+  background-color: #000;
+}
+
+.carouselControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.controlButton {
+  background: #E9B3D3;
+  color: var(--black);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 0; /* Changed from 50% to 0 for square buttons */
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlButton:hover {
+  background: #d19bbf;
+  color: var(--black);
+  transform: scale(1.1);
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #E9B3D3;
+}
+
+.activeDot {
+  background-color: #E9B3D3;
+  transform: scale(1.2);
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.instagramButton {
+  display: inline-block;
+  background: #E9B3D3;
+  color: var(--black);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 179, 211, 0.3);
+}
+
+.instagramButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 179, 211, 0.4);
+  color: var(--black);
+  text-decoration: none;
+  background: #d19bbf;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .videoItem {
+    flex: 0 0 214px; /* Reduced from 225px by 5% */
+  }
+  
+  .video {
+    height: 299px; /* Reduced from 315px by 5% */
+  }
+  
+  .carouselControls {
+    gap: 1rem;
+  }
+  
+  .controlButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoItem {
+    flex: 0 0 171px; /* Reduced from 180px by 5% */
+  }
+  
+  .video {
+    height: 257px; /* Reduced from 270px by 5% */
+  }
+} 

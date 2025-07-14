@@ -1,0 +1,168 @@
+.menuSection {
+  padding: 80px 0;
+  background-color: var(--gray-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--gray-dark);
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.menuItem {
+  background-color: var(--white);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover {
+  transform: translateY(-5px);
+}
+
+.menuImage {
+  margin-bottom: 20px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary-pink), var(--primary-green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.menuItem h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.menuItem p {
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+.orderSection {
+  text-align: center;
+  background-color: var(--white);
+  padding: 40px;
+}
+
+.orderSection h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.orderSection p {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orderButton {
+  font-size: 1.2rem;
+  padding: 18px 40px;
+}
+
+.orderButton:hover {
+  box-shadow: none;
+}
+
+.menuImg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0;
+  background: #f3f3f3;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .menuGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuSection {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .menuGrid {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .menuItem {
+    padding: 25px;
+  }
+
+  .orderSection {
+    padding: 30px 20px;
+  }
+
+  .orderSection h3 {
+    font-size: 1.5rem;
+  }
+
+  .orderSection p {
+    font-size: 1rem;
+  }
+
+  .orderButton {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+  }
+} 
